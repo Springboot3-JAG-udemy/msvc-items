@@ -29,7 +29,7 @@ public class ItemServiceImpl implements ItemService {
         Map<String, String> pathVariables = new HashMap<String, String>();
         pathVariables.put("id", id.toString());
 
-        Producto producto = clienteRest.getForObject("http://localhost:4251/listar/${id}", Producto.class, pathVariables);
+        Producto producto = clienteRest.getForObject("http://localhost:4250/listar/{id}", Producto.class, pathVariables);
 
         return new Item(producto, cantidad);
     }
