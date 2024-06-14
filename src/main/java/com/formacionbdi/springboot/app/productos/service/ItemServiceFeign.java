@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service("serviceFeign")
-@Primary // para inyectar este servicio por defecto en el controlador
+// @Primary // para inyectar este servicio por defecto en el controlador
 public class ItemServiceFeign implements ItemService {
 
     @Autowired
